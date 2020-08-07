@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Baloo Chettan";
+  src: url("../font/BalooChettan-Regular.woff") format("woff"),
+    url("../font/BalooChettan-Regular.ttf") format("ttf");
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #3c4043;
+}
+
+.nav-item {
+  font-size: 0.875rem;
+  margin-right: 40px;
+}
+
+.nav-item .btn {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+  color: black !important;
+}
+
+.text-pastel-green {
+  color: #5ae295;
+}
+
+.btn-outline-pastel-green {
+  border: 1px solid #5ae295;
+  color: #5ae295;
+}
+
+.btn-outline-pastel-green:hover {
+  background-color: #5ae295;
+  color: white;
+}
+
+.btn-pastel-green {
+  background-color: #5ae295;
+  color: white;
+}
+
+.btn-pastel-green:hover {
+  background-color: #51ca85;
+  color: white;
+}
+
+.section-frame {
+  margin-bottom: 150px;
+}
+
+.section-title {
+  font-family: "Baloo Chettan", cursive;
+  color: #3c4043;
+  font-weight: 800;
+}
+
+h1.section-title {
+  font-size: 4.0625rem;
+}
+
+h2.section-title {
+  font-size: 3.125rem;
+}
+
+.section-desc {
+  width: 70%;
+  color: #3c4043;
+}
+
+.section-frame .btn {
+  margin-top: 40px;
+  padding: 1rem 2.25rem;
+  box-shadow: 0 0.1875rem 0 rgba(90, 226, 149, 0.25) !important;
+}
+
+.whyus-count {
+  font-family: "Baloo Chettan", cursive;
+  font-size: 3.75rem;
+  color: #5ae295;
+  margin-bottom: 5px;
+}
+
+.whyus-desc {
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.mb-65px {
+  margin-bottom: 65px;
+}
+
+.card-service {
+  border-radius: 0.625rem;
+  height: 450px;
+  box-shadow: 0 4px 4px rgba(60, 64, 67, 0.5) !important;
+}
+
+.card-service .card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 225px;
+  text-align: center;
+  background-color: white;
+  border-top: 8px solid #5ae295;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-service .card-header img {
+  width: 200px;
+}
+
+.card-service .card-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.card-service .card-footer {
+  text-align: center;
+  background-color: white;
+  border-top: 0;
+  padding-bottom: 50px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-service .card-footer a {
+  color: #5ae295;
+  text-decoration: none;
+}
