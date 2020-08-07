@@ -25,6 +25,18 @@ body {
   color: black !important;
 }
 
+a.nav-hover:hover::after {
+  content: '';
+  display: block;
+  background: transparent;
+  height: 4px;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0px auto -4px;
+  box-shadow: 0 4px 0 0 #5AE295;
+}
+
+
 .text-pastel-green {
   color: #5ae295;
 }
@@ -133,4 +145,22 @@ h2.section-title {
 .card-service .card-footer a {
   color: #5ae295;
   text-decoration: none;
+}
+
+img.radius-10 {
+  border-radius: 10px;
+}
+
+input.form-control {
+  margin-top: 40px;
+  padding: 2rem 2.25rem !important;
+  border-radius: 100px;
+  width: 50% !important;
+  display: inline-block;
+}
+
+hr.break-section {
+  border-top: 1px solid #d6d6d6;
+  box-shadow: -5px 1px 5px rgba(60, 64, 67, 0.5);
+  margin: 40px 0px;
 }

@@ -133,4 +133,5 @@
             </div>
         </div>
     </section>
-    <?= $this->endSection(); ?>
+</div>
+<?= $this->endSection(); ?>
