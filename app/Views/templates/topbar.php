@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white mb-5">
     <div class="container">
         <a class="navbar-brand" href="<?= base_url('/'); ?>">
             <img src="<?= base_url('assets/img/logo_header.png'); ?>" alt="" loading="lazy">

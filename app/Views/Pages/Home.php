@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <section class="section-frame">
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-lg-6">
                 <h1 class="section-title mb-65px">Ladang Informasi Tani Masa Kini</h1>
                 <div class="section-desc text-wrap">
