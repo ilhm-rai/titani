@@ -33,31 +33,31 @@ a.nav-hover:hover::after {
   border-radius: 10px;
   width: 50%;
   margin: 0px auto -4px;
-  box-shadow: 0 4px 0 0 #5AE295;
+  box-shadow: 0 4px 0 0 #50D890;
 }
 
 
 .text-pastel-green {
-  color: #5ae295;
+  color: #50D890;
 }
 
 .btn-outline-pastel-green {
-  border: 1px solid #5ae295;
-  color: #5ae295;
+  border: 1px solid #50D890;
+  color: #50D890;
 }
 
 .btn-outline-pastel-green:hover {
-  background-color: #5ae295;
+  background-color: #50D890;
   color: white;
 }
 
 .btn-pastel-green {
-  background-color: #5ae295;
+  background-color: #50D890;
   color: white;
 }
 
 .btn-pastel-green:hover {
-  background-color: #51ca85;
+  background-color: #50D890;
   color: white;
 }
 
@@ -87,18 +87,25 @@ h2.section-title {
 .section-frame .btn {
   margin-top: 40px;
   padding: 1rem 2.25rem;
+}
+
+.section-frame .btn-pastel-green {
   box-shadow: 0 0.1875rem 0 rgba(90, 226, 149, 0.25) !important;
+}
+
+.section-frame .btn-light {
+  box-shadow: 0 0.1875rem 0 rgba(255, 255, 255, 0.25) !important;
 }
 
 .whyus-count {
   font-family: "Baloo Chettan", cursive;
   font-size: 3.75rem;
-  color: #5ae295;
+  color: #50D890;
   margin-bottom: 5px;
 }
 
 .whyus-desc {
-  font-size: 0.875rem;
+  font-size: 14px;
   text-align: left;
 }
 
@@ -119,9 +126,25 @@ h2.section-title {
   min-height: 225px;
   text-align: center;
   background-color: white;
-  border-top: 8px solid #5ae295;
+  border-top: 8px solid #50D890;
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-vertically {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.partner-img {
+  max-height: 255px;
 }
 
 .card-service .card-header img {
@@ -143,8 +166,77 @@ h2.section-title {
 }
 
 .card-service .card-footer a {
-  color: #5ae295;
+  color: #50D890;
   text-decoration: none;
+}
+
+.frame-feedback {
+  height: 300px;
+}
+
+.card-feedback {
+  width: 395px;
+  height: 250px;
+  border-radius: 10px;
+  margin-right: 25px;
+  box-shadow: 0 4px 4px rgba(60, 64, 67, 0.5) !important;
+}
+
+.card-feedback .card-header {
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background-color: white;
+}
+
+.card-feedback .card-header .row {
+  padding: 0 0.5rem;
+}
+
+.card-feedback .card-body {
+  padding: 1rem;
+}
+
+.card-feedback .farmer-address {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.card-feedback .card-title {
+  color: #50D890;
+  margin-bottom: 0;
+}
+
+.card-feedback .farmer-img {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+}
+
+footer .main-footer {
+  padding: 7.8125rem 0;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+footer .second-footer {
+  padding: 2.5rem 0;
+}
+
+.footer-menu-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.footer-menu a.menu {
+  text-decoration: none;
+  display: block;
+  color: #3c4043;
+  margin-bottom: 1.25rem;
+}
+
+.footer-menu a.menu:hover {
+  color: #50D890;
 }
 
 img.radius-10 {
