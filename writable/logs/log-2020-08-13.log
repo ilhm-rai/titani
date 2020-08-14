@@ -1,0 +1,21 @@
+CRITICAL - 2020-08-13 01:49:57 --> Invalid file: Blog.php
+#0 D:\xampp\htdocs\titani\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Blog.php')
+#1 D:\xampp\htdocs\titani\system\Common.php(1119): CodeIgniter\View\View->render('Blog', Array, true)
+#2 D:\xampp\htdocs\titani\app\Controllers\Blog.php(10): view('Blog', Array)
+#3 D:\xampp\htdocs\titani\system\CodeIgniter.php(918): App\Controllers\Blog->index()
+#4 D:\xampp\htdocs\titani\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+#5 D:\xampp\htdocs\titani\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\titani\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\titani\system\Commands\Server\rewrite.php(34): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-08-13 01:55:12 --> Call to undefined method CodeIgniter\View\View::include_once()
+#0 D:\xampp\htdocs\titani\system\View\View.php(246): include()
+#1 D:\xampp\htdocs\titani\system\View\View.php(257): CodeIgniter\View\View->render('templates/templ...', Array, true)
+#2 D:\xampp\htdocs\titani\system\Common.php(1119): CodeIgniter\View\View->render('Blog/index', Array, true)
+#3 D:\xampp\htdocs\titani\app\Controllers\Blog.php(10): view('Blog/index', Array)
+#4 D:\xampp\htdocs\titani\system\CodeIgniter.php(918): App\Controllers\Blog->index()
+#5 D:\xampp\htdocs\titani\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+#6 D:\xampp\htdocs\titani\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\titani\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\titani\system\Commands\Server\rewrite.php(34): require_once('D:\\xampp\\htdocs...')
+#9 {main}
