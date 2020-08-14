@@ -69,8 +69,8 @@
                             <div class="col-lg-3">
                                 <div class="footer-menu">
                                     <div class="footer-menu-title">Sosial Media</div>
-                                    <a href="#" class="btn btn-info btn-circle"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" class="btn btn-primary btn-circle"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="btn btn-info btn-circle mr-3"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn btn-primary btn-circle mr-3"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#" class="btn btn-danger btn-circle"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
