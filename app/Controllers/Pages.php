@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
-class Page extends BaseController
+class Pages extends BaseController
 {
 	public function index()
 	{
 		$data['title'] = "Home | Titani Indonesia";
-		return view('Pages/home', $data);
+		return view('pages/home', $data);
 	}
 	public function test()
 	{
@@ -16,6 +16,11 @@ class Page extends BaseController
 	public function about()
 	{
 		$data['title'] = "Tentang | Titani Indonesia";
-		return view('Pages/about', $data);
+		return view('pages/about', $data);
+	}
+	public function blog()
+	{
+		$data['title'] = "Blog Tani | Titani Indonesia";
+		return view('pages/blog', $data);
 	}
 }
