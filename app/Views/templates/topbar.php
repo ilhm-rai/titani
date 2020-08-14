@@ -21,7 +21,7 @@
                     <a class="nav-link nav-hover" href="<?= base_url('blog'); ?>">Blog Tani</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-pastel-green rounded-pill mr-2" href="#">Masuk</a>
+                    <a class="btn btn-outline-pastel-green rounded-pill mr-2" href="/login">Masuk</a>
                     <a class="btn btn-pastel-green rounded-pill" href="#">Daftar</a>
                 </li>
             </ul>
