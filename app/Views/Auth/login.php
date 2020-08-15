@@ -15,8 +15,9 @@
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group password-wrapper">
                                 <input type="password" class="form-control form-control-user form-titani" id="password" name="password" placeholder="Kata Sandi">
+                                <i class="visible fas fa-eye"></i>
                             </div>
                             <div class="text-center mb-3">
                                 <a class="small link-reset" href="forgot-password.html">Lupa Kata Sandi?</a>

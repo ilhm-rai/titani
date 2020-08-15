@@ -21,9 +21,11 @@
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Kata Sandi">
+                                    <i class="visible fas fa-eye"></i>
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Ulangi Kata Sandi">
+                                    <i class="visible fas fa-eye"></i>
                                 </div>
                             </div>
                             <div class="text-center mb-3">

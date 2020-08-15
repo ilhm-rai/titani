@@ -261,3 +261,13 @@ footer .second-footer {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(80, 216, 144, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(80, 216, 144, 0.25);
 }
+
+.password-wrapper {
+  position: relative;
+}
+
+.visible {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+}
