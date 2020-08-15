@@ -22,7 +22,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-outline-pastel-green rounded-pill mr-2" href="/login">Masuk</a>
-                    <a class="btn btn-pastel-green rounded-pill" href="/registration">Daftar</a>
+                    <a class="btn btn-pastel-green rounded-pill" href="/register">Daftar</a>
                 </li>
             </ul>
         </div>

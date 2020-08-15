@@ -11,9 +11,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <img src="<?= base_url('assets/img/logo_gram.png'); ?>" alt="" class="mx-auto d-block mb-3">
-                        <form class="user">
+                        <form class="user" action="<?= base_url('auth/save'); ?> " method="post">
+                            <?= csrf_field(); ?>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user form-titani" id="name" name="name" placeholder="Nama Lengkap">
+                                <input type="text" class="form-control form-control-user form-titani" id="name" name="name" placeholder="Nama Lengkap" autofocus>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email">

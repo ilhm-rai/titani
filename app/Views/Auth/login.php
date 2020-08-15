@@ -11,9 +11,14 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <img src="<?= base_url('assets/img/logo_gram.png'); ?>" alt="" class="mx-auto d-block mb-3">
+                        <?php if (session()->getFlashdata('message')) : ?>
+                            <div class="alert alert-success" role="alert">
+                                <?= session()->getFlashdata('message'); ?>
+                            </div>
+                        <?php endif; ?>
                         <form class="user">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email">
+                                <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email" autofocus>
                             </div>
                             <div class="form-group password-wrapper">
                                 <input type="password" class="form-control form-control-user form-titani" id="password" name="password" placeholder="Kata Sandi">
