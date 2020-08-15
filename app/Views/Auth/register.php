@@ -13,19 +13,27 @@
                         <img src="<?= base_url('assets/img/logo_gram.png'); ?>" alt="" class="mx-auto d-block mb-3">
                         <form class="user">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email">
+                                <input type="text" class="form-control form-control-user form-titani" id="name" name="name" placeholder="Nama Lengkap">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-user form-titani" id="password" name="password" placeholder="Kata Sandi">
+                                <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Kata Sandi">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Ulangi Kata Sandi">
+                                </div>
                             </div>
                             <div class="text-center mb-3">
                                 <a class="small link-reset" href="forgot-password.html">Lupa Kata Sandi?</a>
                             </div>
                             <button type="submit" class="btn btn-pastel-green btn-user btn-block">
-                                MASUK
+                                DAFTAR
                             </button>
                             <hr>
-                            <span class="small">Anda dapat menggunakan akun dan kata sandi di bawah ini untuk masuk secara langsung.</span>
+                            <span class="small">Anda dapat menggunakan akun dan kata sandi di bawah ini untuk daftar secara langsung.</span>
                             <div class="row mt-3">
                                 <div class="col-sm-6">
                                     <a href="index.html" class="btn btn-google-white btn-user btn-block">
@@ -51,7 +59,7 @@
                         </form>
 
                         <div class="text-center mt-5">
-                            <a class="small link-reset" href="/register">Belum Punya Akun?<span class="text-pastel-green"> Mendaftar Sekarang</span></a>
+                            <a class="small link-reset" href="/login">Sudah Punya Akun?<span class="text-pastel-green"> Masuk Sekarang</span></a>
                         </div>
                     </div>
                 </div>

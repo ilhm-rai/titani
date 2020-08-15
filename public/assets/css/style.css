@@ -41,6 +41,15 @@ a.nav-hover:hover::after {
   color: #50D890;
 }
 
+.link-reset {
+  color: #3c4043;
+}
+
+.link-reset:hover {
+  color: #3c4043;
+  text-decoration: none;
+}
+
 .btn-outline-pastel-green {
   border: 1px solid #50D890;
   color: #50D890;
@@ -59,6 +68,11 @@ a.nav-hover:hover::after {
 .btn-pastel-green:hover {
   background-color: #50D890;
   color: white;
+}
+
+.btn-google-white {
+  border: 1px solid #CED4DA;
+  color: #3C4043;
 }
 
 .section-frame {
@@ -237,4 +251,13 @@ footer .second-footer {
 
 .footer-menu a.menu:hover {
   color: #50D890;
+}
+
+
+/* login */
+.form-titani:focus {
+  border-color: #50d890;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(80, 216, 144, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(80, 216, 144, 0.25);
 }

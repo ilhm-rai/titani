@@ -9,4 +9,9 @@ class Auth extends BaseController
         $data['title'] = "Login | Titani Indonesia";
         return view('Auth/login', $data);
     }
+    public function register()
+    {
+        $data['title'] = "Register | Titani Indonesia";
+        return view('Auth/register', $data);
+    }
 }
