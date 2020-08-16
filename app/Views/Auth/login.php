@@ -25,7 +25,7 @@
                                 <i class="visible fas fa-eye"></i>
                             </div>
                             <div class="text-center mb-3">
-                                <a class="small link-reset" href="forgot-password.html">Lupa Kata Sandi?</a>
+                                <a class="small link-reset" href="forgot-password.html">Lupa kata sandi?</a>
                             </div>
                             <button type="submit" class="btn btn-pastel-green btn-user btn-block">
                                 MASUK
@@ -37,7 +37,7 @@
                                     <a href="index.html" class="btn btn-google-white btn-user btn-block">
                                         <div class="row justify-content-between">
                                             <div class="col-4">
-                                                <img src="<?= base_url('assets/img/icon_google.svg'); ?>" alt="Icon Google" class="ico">
+                                                <i class="fab fa-google fa-fw"></i>
                                             </div>
                                             <div class="col-8 text-left"><span>Google</span></div>
                                         </div>
@@ -57,7 +57,7 @@
                         </form>
 
                         <div class="text-center mt-5">
-                            <a class="small link-reset" href="/register">Belum Punya Akun?<span class="text-pastel-green"> Mendaftar Sekarang</span></a>
+                            <a class="small link-reset" href="/register">Belum punya akun?<span class="text-pastel-green"> mendaftar sekarang</span></a>
                         </div>
                     </div>
                 </div>

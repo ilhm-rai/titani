@@ -17,13 +17,5 @@ class Pages extends BaseController
 	{
 		$data['title'] = "Tentang | Titani Indonesia";
 		return view('pages/about', $data);
-<<<<<<< HEAD
-=======
-	}
-	public function blog()
-	{
-		$data['title'] = "Blog Tani | Titani Indonesia";
-		return view('pages/blog', $data);
->>>>>>> 478eaf54c662bdc1da14da1cb4c9f1eb81088bf6
 	}
 }

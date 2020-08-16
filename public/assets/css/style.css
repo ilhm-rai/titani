@@ -252,11 +252,6 @@ footer .second-footer {
   color: #50D890;
 }
 
-<<<<<<< HEAD
-.radius-10 {
-  border-radius: 10px;
-}
-
 hr.break-section {
   border-top: 1px solid #d6d6d6;
   margin: 40px 0px;
@@ -279,7 +274,7 @@ hr.break-section {
   opacity: 1;
   font-size: 1.5625rem;
   color: #50D890;
-=======
+}
 
 /* login */
 .form-titani:focus {
@@ -297,5 +292,4 @@ hr.break-section {
   position: absolute;
   top: 1em;
   right: 1.5em;
->>>>>>> 478eaf54c662bdc1da14da1cb4c9f1eb81088bf6
 }

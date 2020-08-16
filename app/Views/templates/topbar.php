@@ -21,15 +21,9 @@
                 <li class="nav-item">
                     <a class="nav-link nav-hover" href="<?= base_url('blog'); ?>">Blog Tani</a>
                 </li>
-<<<<<<< HEAD
-                <li class="nav-item mr-0">
-                    <a class="btn btn-outline-pastel-green rounded-pill mr-2" href="#">Masuk</a>
-                    <a class="btn btn-pastel-green rounded-pill" href="#">Daftar</a>
-=======
                 <li class="nav-item">
                     <a class="btn btn-outline-pastel-green rounded-pill mr-2" href="/login">Masuk</a>
                     <a class="btn btn-pastel-green rounded-pill" href="/register">Daftar</a>
->>>>>>> 478eaf54c662bdc1da14da1cb4c9f1eb81088bf6
                 </li>
             </ul>
         </div>

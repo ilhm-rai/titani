@@ -36,13 +36,13 @@
                                 DAFTAR
                             </button>
                             <hr>
-                            <span class="small">Anda dapat menggunakan akun dan kata sandi di bawah ini untuk daftar secara langsung.</span>
+                            <span class="small">Anda dapat menggunakan akun dan kata sandi di bawah ini untuk mendaftar secara langsung.</span>
                             <div class="row mt-3">
                                 <div class="col-sm-6">
                                     <a href="index.html" class="btn btn-google-white btn-user btn-block">
                                         <div class="row justify-content-between">
                                             <div class="col-4">
-                                                <img src="<?= base_url('assets/img/icon_google.svg'); ?>" alt="Icon Google" class="ico">
+                                                <i class="fab fa-google fa-fw"></i>
                                             </div>
                                             <div class="col-8 text-left"><span>Google</span></div>
                                         </div>
@@ -62,7 +62,7 @@
                         </form>
 
                         <div class="text-center mt-5">
-                            <a class="small link-reset" href="/login">Sudah Punya Akun?<span class="text-pastel-green"> Masuk Sekarang</span></a>
+                            <a class="small link-reset" href="/login">Sudah punya akun? <span class="text-pastel-green">masuk sekarang</span></a>
                         </div>
                     </div>
                 </div>
