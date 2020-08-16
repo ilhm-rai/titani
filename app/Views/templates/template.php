@@ -93,6 +93,7 @@
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url('assets/'); ?>/vendor/startbootstrap-sb-admin-2-gh-pages/js/sb-admin-2.min.js"></script>
     <!-- Slick JS -->
+    <script src="<?= base_url('assets/js/script.js'); ?>"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 </body>
 
