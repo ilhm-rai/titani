@@ -6,18 +6,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> -->
-    <!-- Custom fonts for this template-->
+    <!-- Custom Font -->
     <link href="<?= base_url('assets'); ?>/vendor/fontawesome-free-5.14.0-web/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;800&display=swap" rel="stylesheet">
+    <!-- SBAdmin CSS -->
+    <link href="<?= base_url('assets'); ?>/vendor/startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css" rel="stylesheet">
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
-    <!-- SBAdmin CSS -->
-    <link href="<?= base_url('assets'); ?>/vendor/startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?= base_url('assets/'); ?>/vendor/jquery/jquery.min.js"></script>
 
     <title><?= esc($title); ?></title>
 </head>
@@ -86,28 +87,13 @@
         </div>
     </footer>
     <!-- Bootstrap core JavaScript-->
-    <script src="<?= base_url('assets/'); ?>/vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_url('assets/'); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <!-- Core plugin JavaScript-->
     <script src="<?= base_url('assets/'); ?>/vendor/jquery-easing/jquery.easing.min.js"></script>
-
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url('assets/'); ?>/vendor/startbootstrap-sb-admin-2-gh-pages/js/sb-admin-2.min.js"></script>
     <!-- Slick JS -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.farmer-feedback').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                variableWidth: true,
-                dots: true,
-                autoplay: true
-            });
-        });
-    </script>
 </body>
 
 </html>
