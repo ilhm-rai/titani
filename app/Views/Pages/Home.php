@@ -69,14 +69,14 @@
             </div>
         </div>
     </section>
-    <section class="section-frame">
+    <section class="section-frame" id="service">
         <div class="text-center">
             <h2 class="section-title mb-4">Layanan Titani</h2>
             <p class="mb-4">Berikut ini layanan titani yang dapat membantumu menjadi seorang petani profesional </p>
         </div>
         <div class="row">
-            <div class="col-lg-3">
-                <div class="card card-service">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card card-service h-100">
                     <div class="card-header text-center">
                         <img src="<?= base_url('assets/img/layanan1.png'); ?>" alt="...">
                     </div>
@@ -89,8 +89,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card card-service">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card card-service h-100">
                     <div class="card-header text-center">
                         <img src="<?= base_url('assets/img/layanan2.png'); ?>" alt="...">
                     </div>
@@ -103,8 +103,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card card-service">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card card-service h-100">
                     <div class="card-header text-center">
                         <img src="<?= base_url('assets/img/layanan3.png'); ?>" alt="...">
                     </div>
@@ -117,8 +117,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card card-service">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                <div class="card card-service h-100">
                     <div class="card-header">
                         <img src="<?= base_url('assets/img/layanan4.png'); ?>" alt="...">
                     </div>
@@ -247,4 +247,17 @@
         <a href="#" class="btn btn-light rounded-pill text-pastel-green">Daftar Sekarang</a>
     </div>
 </section>
+<script>
+    $(document).ready(function() {
+        $('.farmer-feedback').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            variableWidth: true,
+            dots: true,
+            autoplay: true,
+            arrows: false
+        });
+    });
+</script>
 <?= $this->endSection(); ?>
