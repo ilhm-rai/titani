@@ -15,14 +15,14 @@ class Auth extends BaseController
     public function index()
     {
         $data['title'] = "Login | Titani Indonesia";
-        return view('Auth/login', $data);
+        return view('auth/login', $data);
     }
     public function register()
     {
         $data['title'] = "Register | Titani Indonesia";
         // $user = $this->userModel->findAll();
         // dd($user);
-        return view('Auth/register', $data);
+        return view('auth/register', $data);
     }
 
     public function save()
@@ -37,6 +37,6 @@ class Auth extends BaseController
         ]);
 
         session()->setFlashdata('message', 'Selamat anda telah bergabung menjadi bagian dari titani cek email untuk verifikasi');
-        return redirect()->to('/login');
+        return redirect()->to('login');
     }
 }
