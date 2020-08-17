@@ -15,14 +15,24 @@
                             <div class="alert alert-success" role="alert">
                                 <?= session()->getFlashdata('message'); ?>
                             </div>
+                            <div class="alert alert-danger" role="alert">
+                                <?= session()->getFlashdata('error'); ?>
+                            </div>
                         <?php endif; ?>
-                        <form class="user">
+                        <form class="user" action="<?= base_url('auth/login'); ?>" method="post">
+                            <?= csrf_field(); ?>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email" autofocus>
+                                <input type="text" class="form-control form-control-user form-titani <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" id="email" name="email" placeholder="Alamat Email" autofocus>
+                                <div class="invalid-feedback pl-3">
+                                    <?= $validation->getError('email'); ?>
+                                </div>
                             </div>
                             <div class="form-group password-wrapper">
-                                <input type="password" class="form-control form-control-user form-titani" id="password" name="password" placeholder="Kata Sandi">
+                                <input type="password" class="form-control form-control-user <?= ($validation->hasError('password1')) ? 'is-invalid' : ''; ?>" id="password" name="password" placeholder="Kata Sandi">
                                 <i class="visible fas fa-eye"></i>
+                                <div class="invalid-feedback pl-3">
+                                    <?= $validation->getError('password'); ?>
+                                </div>
                             </div>
                             <div class="text-center mb-3">
                                 <a class="small link-reset" href="forgot-password.html">Lupa kata sandi?</a>

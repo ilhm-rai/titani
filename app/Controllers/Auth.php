@@ -14,17 +14,75 @@ class Auth extends BaseController
 
     public function index()
     {
-        $data['title'] = "Login | Titani Indonesia";
+        $data = [
+            'title' => 'Login | Titani Indonesia',
+            'validation' => \Config\Services::validation()
+        ];
         return view('auth/login', $data);
     }
+
+    public function login()
+    {
+
+        if (!$this->validate([
+            'email' => [
+                'label' => 'Email',
+                'rules' => 'required|trim|valid_email',
+                'errors' => [
+                    'required' => '{field} Harus diisi',
+                    'valid_email' => '{field} tidak valid'
+                ]
+            ], 'password' => [
+                'label' => 'Kata Sandi',
+                'rules' => 'required|trim',
+                'errors' => [
+                    'required' => '{field} Harus diisi',
+                ]
+            ]
+        ])) {
+            $email = $this->request->getVar('email');
+            $password = $this->request->getVar('password');
+            $user = $this->userModel->getUser("email", $email);
+            // jika usernya ada
+            if ($user) {
+                // jika usernya aktif
+                if ($user['is_active'] == 1) {
+                    // cek password
+                    if (password_verify($password, $user['password'])) {
+                        $data = [
+                            'email' => $user['email'],
+                            'role_id' => $user['role_id']
+                        ];
+                        $this->session->set_userdata($data);
+                        // arahkan ke view user atau admin
+                        if ($user['role_id'] == 1) {
+                            return redirect()->to('/admin');
+                        } else {
+                            return redirect()->to('/user');
+                        }
+                    } else {
+                        session()->setFlashdata('error', 'Kata sandi anda salah, lupa kata sandi?');
+                        return redirect()->to('/login');
+                    }
+                } else {
+                    session()->setFlashdata('error', 'Email berum terverifikasi, silakan verifikasi email anda!');
+                    return redirect()->to('/login');
+                }
+            } else {
+                echo ('User tidak ada');
+                die;
+                session()->setFlashdata('error', 'Email tidak terdaftar!');
+                return redirect()->to('/login');
+            }
+        }
+    }
+
     public function register()
     {
         $data = [
             'title' => "Register | Titani Indonesia",
             'validation' => \Config\Services::validation()
         ];
-        // $user = $this->userModel->findAll();
-        // dd($user);
         return view('auth/register', $data);
     }
 
