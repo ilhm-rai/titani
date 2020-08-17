@@ -14,19 +14,31 @@
                         <form class="user" action="<?= base_url('auth/save'); ?> " method="post">
                             <?= csrf_field(); ?>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user form-titani" id="name" name="name" placeholder="Nama Lengkap" autofocus>
+                                <input type="text" class="form-control form-control-user form-titani <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" id="name" name="name" placeholder="Nama Lengkap" autofocus>
+                                <div class="invalid-feedback pl-3">
+                                    <?= $validation->getError('name'); ?>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user form-titani" id="email" name="email" placeholder="Alamat Email">
+                                <input type="text" class="form-control form-control-user form-titani <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" id="email" name="email" placeholder="Alamat Email">
+                                <div class="invalid-feedback pl-3">
+                                    <?= $validation->getError('email'); ?>
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Kata Sandi">
+                                    <input type="password" class="form-control form-control-user <?= ($validation->hasError('password1')) ? 'is-invalid' : ''; ?>" id="password1" name="password1" placeholder="Kata Sandi">
                                     <i class="visible fas fa-eye"></i>
+                                    <div class="invalid-feedback pl-3">
+                                        <?= $validation->getError('password1'); ?>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Ulangi Kata Sandi">
+                                    <input type="password" class="form-control form-control-user <?= ($validation->hasError('password2')) ? 'is-invalid' : ''; ?>" id="password2" name="password2" placeholder="Ulangi Kata Sandi">
                                     <i class="visible fas fa-eye"></i>
+                                    <div class="invalid-feedback pl-3">
+                                        <?= $validation->getError('password2'); ?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="text-center mb-3">
