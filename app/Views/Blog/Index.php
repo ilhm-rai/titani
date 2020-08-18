@@ -32,7 +32,10 @@
     <div class="row mt-4">
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4">
             <div class="card card-blog h-100">
-                <img src="<?= base_url('assets/img/artikel1.png'); ?>" class="card-img-top" alt="...">
+                <div class="position-relative">
+                    <img src="<?= base_url('assets/img/artikel1.png'); ?>" class="card-img-top" alt="...">
+                    <div class="card-badge"><span class="badge custom-badge badge-green-pastel">Cara Tani</span></div>
+                </div>
                 <div class="card-body">
                     <h6 class="card-title">Teknik Hidroponik</h6>
                     <p class="text-muted small">21 Agustus 2020</p>
@@ -41,7 +44,10 @@
         </div>
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4">
             <div class="card card-blog h-100">
-                <img src="<?= base_url('assets/img/artikel2.png'); ?>" class="card-img-top" alt="...">
+                <div class="position-relative">
+                    <img src="<?= base_url('assets/img/artikel2.png'); ?>" class="card-img-top" alt="...">
+                    <div class="card-badge"><span class="badge custom-badge badge-green-pastel">Cara Tani</span></div>
+                </div>
                 <div class="card-body">
                     <h6 class="card-title">Cara Pengendalian Hama</h6>
                     <p class="text-muted small">21 Agustus 2020</p>
@@ -50,7 +56,10 @@
         </div>
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4">
             <div class="card card-blog h-100">
-                <img src="<?= base_url('assets/img/artikel3.png'); ?>" class="card-img-top" alt="...">
+                <div class="position-relative">
+                    <img src="<?= base_url('assets/img/artikel3.png'); ?>" class="card-img-top" alt="...">
+                    <div class="card-badge"><span class="badge custom-badge badge-green-pastel">Info Tani</span></div>
+                </div>
                 <div class="card-body">
                     <h6 class="card-title">Manfaat Buah Stroberi</h6>
                     <p class="text-muted small">21 Agustus 2020</p>
@@ -59,7 +68,10 @@
         </div>
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4">
             <div class="card card-blog h-100">
-                <img src="<?= base_url('assets/img/artikel1.png'); ?>" class="card-img-top" alt="...">
+                <div class="position-relative">
+                    <img src="<?= base_url('assets/img/artikel1.png'); ?>" class="card-img-top" alt="...">
+                    <div class="card-badge"><span class="badge custom-badge badge-green-pastel">Cara Tani</span></div>
+                </div>
                 <div class="card-body">
                     <h6 class="card-title">Teknik Hidroponik</h6>
                     <p class="text-muted small">21 Agustus 2020</p>
@@ -68,7 +80,10 @@
         </div>
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4">
             <div class="card card-blog h-100">
-                <img src="<?= base_url('assets/img/artikel2.png'); ?>" class="card-img-top" alt="...">
+                <div class="position-relative">
+                    <img src="<?= base_url('assets/img/artikel2.png'); ?>" class="card-img-top" alt="...">
+                    <div class="card-badge"><span class="badge custom-badge badge-green-pastel">Cara Tani</span></div>
+                </div>
                 <div class="card-body">
                     <h6 class="card-title">Cara Pengendalian Hama</h6>
                     <p class="text-muted small">21 Agustus 2020</p>
@@ -77,7 +92,10 @@
         </div>
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4">
             <div class="card card-blog h-100">
-                <img src="<?= base_url('assets/img/artikel3.png'); ?>" class="card-img-top" alt="...">
+                <div class="position-relative">
+                    <img src="<?= base_url('assets/img/artikel3.png'); ?>" class="card-img-top" alt="...">
+                    <div class="card-badge"><span class="badge custom-badge badge-green-pastel">Info Tani</span></div>
+                </div>
                 <div class="card-body">
                     <h6 class="card-title">Manfaat Buah Stroberi</h6>
                     <p class="text-muted small">21 Agustus 2020</p>

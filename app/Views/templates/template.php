@@ -8,7 +8,7 @@
 
     <!-- Custom Font -->
     <link href="<?= base_url('assets'); ?>/vendor/fontawesome-free-5.14.0-web/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;800&display=swap" rel="stylesheet">
     <!-- SBAdmin CSS -->
     <link href="<?= base_url('assets'); ?>/vendor/startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css" rel="stylesheet">
