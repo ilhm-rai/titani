@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2020 at 11:30 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Waktu pembuatan: 18 Agu 2020 pada 05.44
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contests`
+-- Struktur dari tabel `contests`
 --
 
 CREATE TABLE `contests` (
@@ -42,7 +42,7 @@ CREATE TABLE `contests` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contest_participants`
+-- Struktur dari tabel `contest_participants`
 --
 
 CREATE TABLE `contest_participants` (
@@ -55,7 +55,7 @@ CREATE TABLE `contest_participants` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contest_types`
+-- Struktur dari tabel `contest_types`
 --
 
 CREATE TABLE `contest_types` (
@@ -67,7 +67,7 @@ CREATE TABLE `contest_types` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `courses`
+-- Struktur dari tabel `courses`
 --
 
 CREATE TABLE `courses` (
@@ -82,7 +82,7 @@ CREATE TABLE `courses` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course_modules`
+-- Struktur dari tabel `course_modules`
 --
 
 CREATE TABLE `course_modules` (
@@ -96,7 +96,7 @@ CREATE TABLE `course_modules` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course_types`
+-- Struktur dari tabel `course_types`
 --
 
 CREATE TABLE `course_types` (
@@ -108,7 +108,7 @@ CREATE TABLE `course_types` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `events`
+-- Struktur dari tabel `events`
 --
 
 CREATE TABLE `events` (
@@ -125,7 +125,7 @@ CREATE TABLE `events` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event_participants`
+-- Struktur dari tabel `event_participants`
 --
 
 CREATE TABLE `event_participants` (
@@ -138,7 +138,7 @@ CREATE TABLE `event_participants` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event_types`
+-- Struktur dari tabel `event_types`
 --
 
 CREATE TABLE `event_types` (
@@ -150,7 +150,7 @@ CREATE TABLE `event_types` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `payments`
+-- Struktur dari tabel `payments`
 --
 
 CREATE TABLE `payments` (
@@ -163,7 +163,7 @@ CREATE TABLE `payments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subscribe`
+-- Struktur dari tabel `subscribe`
 --
 
 CREATE TABLE `subscribe` (
@@ -177,7 +177,7 @@ CREATE TABLE `subscribe` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -188,21 +188,21 @@ CREATE TABLE `users` (
   `password` varchar(256) NOT NULL,
   `role_id` int(11) NOT NULL,
   `is_active` int(1) NOT NULL,
-  `date_created` int(11) NOT NULL
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(1, 'Muhamad Arsaludin', 'muhamadarsaludin71@gmail.com', 'IMG-20180430-WA0014.jpg', '$2y$10$DMGmi7A62EpwA9EXuxhVHevP54knyBQjQczZkaJ/agcR817Ewh.yi', 1, 1, 1575854277),
-(23, 'Arsaludin', 'muhamadarsal71@gmail.com', 'default.png', '$2y$10$OAs1Nj8LacC7ccAUbqok4eK8Seh6FF.BcKaM9EqvmGFZYpHWUongO', 2, 1, 1593854867);
+INSERT INTO `users` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `created_at`, `updated_at`) VALUES
+(35, 'Muhamad Arsaludin', 'muhamadarsaludin71@gmail.com', 'arsal.png', '$2y$10$PAjf9vWen514CDw8TOKQ0e8q7oxTw8K1ByV6WWmGcUNBal7.xJzse', 14, 1, '2020-08-17 12:19:20', '2020-08-17 12:19:20');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_access_menu`
+-- Struktur dari tabel `user_access_menu`
 --
 
 CREATE TABLE `user_access_menu` (
@@ -211,27 +211,10 @@ CREATE TABLE `user_access_menu` (
   `menu_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user_access_menu`
---
-
-INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
-(1, 1, 1),
-(3, 2, 9),
-(4, 1, 3),
-(8, 1, 9),
-(9, 1, 20),
-(18, 1, 22),
-(19, 2, 22),
-(20, 10, 3),
-(21, 10, 9),
-(22, 10, 20),
-(23, 10, 22);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_menu`
+-- Struktur dari tabel `user_menu`
 --
 
 CREATE TABLE `user_menu` (
@@ -239,21 +222,10 @@ CREATE TABLE `user_menu` (
   `menu` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user_menu`
---
-
-INSERT INTO `user_menu` (`id`, `menu`) VALUES
-(1, 'Admin'),
-(3, 'Menu'),
-(9, 'User'),
-(20, 'Product'),
-(22, 'Transaction');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_role`
+-- Struktur dari tabel `user_role`
 --
 
 CREATE TABLE `user_role` (
@@ -262,18 +234,17 @@ CREATE TABLE `user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user_role`
+-- Dumping data untuk tabel `user_role`
 --
 
 INSERT INTO `user_role` (`id`, `role`) VALUES
-(1, 'Administrator'),
-(2, 'Member'),
-(12, 'Manager');
+(13, 'Administration'),
+(14, 'Member');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_sub_menu`
+-- Struktur dari tabel `user_sub_menu`
 --
 
 CREATE TABLE `user_sub_menu` (
@@ -285,29 +256,10 @@ CREATE TABLE `user_sub_menu` (
   `is_active` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user_sub_menu`
---
-
-INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
-(1, 1, 'Dashboard', 'admin', 'fas fa-fw fa-tachometer-alt', 1),
-(2, 9, 'My Profile', 'user', 'fas fa-fw fa-user', 1),
-(3, 9, 'Edit Profile', 'user/edit', 'fas fa-fw fa-user-edit', 1),
-(5, 3, 'Menu Management', 'menu', 'fas fa-fw fa-folder', 1),
-(6, 3, 'Submenu Management', 'menu/submenu', 'fas fa-fw fa-folder-open', 1),
-(13, 1, 'Role', 'admin/role', 'fas fa-fw fa-user-tie', 1),
-(21, 9, 'Change Password', 'user/changepassword', 'fas fa-fw fa-key', 1),
-(22, 1, 'User Management', 'admin/user', 'fas fa-fw fa-user-cog', 1),
-(23, 20, 'Category Management', 'product/category', 'fas fa-fw fa-tags ', 1),
-(25, 20, 'Subcategory Management', 'product/subcategory', 'fas fa-fw fa-bookmark', 1),
-(26, 20, 'Product Management', 'product', 'fas fa-fw fa-bread-slice', 1),
-(29, 1, 'Transaction Management', 'admin/transaction', 'fas fa-fw fa-store', 1),
-(32, 22, 'Cash Sales', 'transaction', 'fas fa-fw fa-cash-register', 1);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_token`
+-- Struktur dari tabel `user_token`
 --
 
 CREATE TABLE `user_token` (
@@ -322,14 +274,14 @@ CREATE TABLE `user_token` (
 --
 
 --
--- Indexes for table `contests`
+-- Indeks untuk tabel `contests`
 --
 ALTER TABLE `contests`
   ADD PRIMARY KEY (`id`),
   ADD KEY `contest_type_id` (`contest_type_id`);
 
 --
--- Indexes for table `contest_participants`
+-- Indeks untuk tabel `contest_participants`
 --
 ALTER TABLE `contest_participants`
   ADD PRIMARY KEY (`id`),
@@ -337,40 +289,40 @@ ALTER TABLE `contest_participants`
   ADD KEY `contest_id` (`contest_id`);
 
 --
--- Indexes for table `contest_types`
+-- Indeks untuk tabel `contest_types`
 --
 ALTER TABLE `contest_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `courses`
+-- Indeks untuk tabel `courses`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`id`),
   ADD KEY `course_type_id` (`course_type_id`);
 
 --
--- Indexes for table `course_modules`
+-- Indeks untuk tabel `course_modules`
 --
 ALTER TABLE `course_modules`
   ADD PRIMARY KEY (`id`),
   ADD KEY `course_id` (`course_id`);
 
 --
--- Indexes for table `course_types`
+-- Indeks untuk tabel `course_types`
 --
 ALTER TABLE `course_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `events`
+-- Indeks untuk tabel `events`
 --
 ALTER TABLE `events`
   ADD PRIMARY KEY (`id`),
   ADD KEY `event_type_id` (`event_type_id`);
 
 --
--- Indexes for table `event_participants`
+-- Indeks untuk tabel `event_participants`
 --
 ALTER TABLE `event_participants`
   ADD PRIMARY KEY (`id`),
@@ -378,20 +330,20 @@ ALTER TABLE `event_participants`
   ADD KEY `fk_event_id` (`event_id`);
 
 --
--- Indexes for table `event_types`
+-- Indeks untuk tabel `event_types`
 --
 ALTER TABLE `event_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `payments`
+-- Indeks untuk tabel `payments`
 --
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `subscribe_id` (`subscribe_id`);
 
 --
--- Indexes for table `subscribe`
+-- Indeks untuk tabel `subscribe`
 --
 ALTER TABLE `subscribe`
   ADD PRIMARY KEY (`id`),
@@ -399,7 +351,7 @@ ALTER TABLE `subscribe`
   ADD KEY `course_id` (`course_id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -407,7 +359,7 @@ ALTER TABLE `users`
   ADD KEY `email` (`email`);
 
 --
--- Indexes for table `user_access_menu`
+-- Indeks untuk tabel `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
   ADD PRIMARY KEY (`id`),
@@ -415,194 +367,194 @@ ALTER TABLE `user_access_menu`
   ADD KEY `menu_id` (`menu_id`);
 
 --
--- Indexes for table `user_menu`
+-- Indeks untuk tabel `user_menu`
 --
 ALTER TABLE `user_menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_role`
+-- Indeks untuk tabel `user_role`
 --
 ALTER TABLE `user_role`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_sub_menu`
+-- Indeks untuk tabel `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
   ADD PRIMARY KEY (`id`),
   ADD KEY `menu_id` (`menu_id`);
 
 --
--- Indexes for table `user_token`
+-- Indeks untuk tabel `user_token`
 --
 ALTER TABLE `user_token`
   ADD PRIMARY KEY (`id`),
   ADD KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `contests`
+-- AUTO_INCREMENT untuk tabel `contests`
 --
 ALTER TABLE `contests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `contest_participants`
+-- AUTO_INCREMENT untuk tabel `contest_participants`
 --
 ALTER TABLE `contest_participants`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `contest_types`
+-- AUTO_INCREMENT untuk tabel `contest_types`
 --
 ALTER TABLE `contest_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `courses`
+-- AUTO_INCREMENT untuk tabel `courses`
 --
 ALTER TABLE `courses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `course_modules`
+-- AUTO_INCREMENT untuk tabel `course_modules`
 --
 ALTER TABLE `course_modules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `course_types`
+-- AUTO_INCREMENT untuk tabel `course_types`
 --
 ALTER TABLE `course_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `events`
+-- AUTO_INCREMENT untuk tabel `events`
 --
 ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `event_participants`
+-- AUTO_INCREMENT untuk tabel `event_participants`
 --
 ALTER TABLE `event_participants`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `event_types`
+-- AUTO_INCREMENT untuk tabel `event_types`
 --
 ALTER TABLE `event_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `payments`
+-- AUTO_INCREMENT untuk tabel `payments`
 --
 ALTER TABLE `payments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `subscribe`
+-- AUTO_INCREMENT untuk tabel `subscribe`
 --
 ALTER TABLE `subscribe`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT for table `user_access_menu`
+-- AUTO_INCREMENT untuk tabel `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `user_menu`
+-- AUTO_INCREMENT untuk tabel `user_menu`
 --
 ALTER TABLE `user_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `user_role`
+-- AUTO_INCREMENT untuk tabel `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `user_sub_menu`
+-- AUTO_INCREMENT untuk tabel `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `user_token`
+-- AUTO_INCREMENT untuk tabel `user_token`
 --
 ALTER TABLE `user_token`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `contests`
+-- Ketidakleluasaan untuk tabel `contests`
 --
 ALTER TABLE `contests`
   ADD CONSTRAINT `fk_contest_type_id` FOREIGN KEY (`contest_type_id`) REFERENCES `contest_types` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `contest_participants`
+-- Ketidakleluasaan untuk tabel `contest_participants`
 --
 ALTER TABLE `contest_participants`
   ADD CONSTRAINT `fk_contest_id` FOREIGN KEY (`contest_id`) REFERENCES `contests` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_user_id_contest` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `courses`
+-- Ketidakleluasaan untuk tabel `courses`
 --
 ALTER TABLE `courses`
   ADD CONSTRAINT `fk_course_type_id` FOREIGN KEY (`course_type_id`) REFERENCES `course_types` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `course_modules`
+-- Ketidakleluasaan untuk tabel `course_modules`
 --
 ALTER TABLE `course_modules`
   ADD CONSTRAINT `fk_course_id` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `events`
+-- Ketidakleluasaan untuk tabel `events`
 --
 ALTER TABLE `events`
   ADD CONSTRAINT `fk_event_type_id` FOREIGN KEY (`event_type_id`) REFERENCES `event_types` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `event_participants`
+-- Ketidakleluasaan untuk tabel `event_participants`
 --
 ALTER TABLE `event_participants`
   ADD CONSTRAINT `fk_event_id` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_user_id_event` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `payments`
+-- Ketidakleluasaan untuk tabel `payments`
 --
 ALTER TABLE `payments`
   ADD CONSTRAINT `fk_subscribe_id` FOREIGN KEY (`subscribe_id`) REFERENCES `subscribe` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `subscribe`
+-- Ketidakleluasaan untuk tabel `subscribe`
 --
 ALTER TABLE `subscribe`
   ADD CONSTRAINT `fk_course_id_subsribe` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_user_id_subsrcibe` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `users`
+-- Ketidakleluasaan untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `fk_role_id` FOREIGN KEY (`role_id`) REFERENCES `user_role` (`id`) ON UPDATE CASCADE;
