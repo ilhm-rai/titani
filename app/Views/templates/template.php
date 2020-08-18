@@ -8,7 +8,7 @@
 
     <!-- Custom Font -->
     <link href="<?= base_url('assets'); ?>/vendor/fontawesome-free-5.14.0-web/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;800&display=swap" rel="stylesheet">
     <!-- SBAdmin CSS -->
     <link href="<?= base_url('assets'); ?>/vendor/startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css" rel="stylesheet">
@@ -25,7 +25,37 @@
 
 <body id="page-top">
 
-    <?= $this->include('Templates/topbar'); ?>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="<?= base_url('/'); ?>" title="Home">
+                <img src="<?= base_url('assets/img/logo_header.png'); ?>" alt="" loading="lazy">
+            </a>
+
+            <button class="btn btn-light d-md-none rounded-circle mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover" href="<?= base_url('about'); ?>">Tentang Titani</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-hover" href="<?= base_url('/'); ?>#service" role="button">
+                            Layanan
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover" href="<?= base_url('blog'); ?>">Blog Tani</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-pastel-green rounded-pill mr-2" href="/login">Masuk</a>
+                        <a class="btn btn-pastel-green rounded-pill" href="/register">Daftar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <?= $this->renderSection('content'); ?>
 
