@@ -225,6 +225,25 @@ h2.section-title {
   border-radius: 0.625rem 0.625rem 0 0;
 }
 
+.card-blog .card-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #3C4043;
+  margin-bottom: 5px;
+}
+
+.card-badge {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.custom-badge {
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+}
+
 footer .main-footer {
   padding: 7.8125rem 0;
   border-top: 1px solid #E2E2EC;
@@ -292,4 +311,19 @@ hr.break-section {
   position: absolute;
   top: 1em;
   right: 1.5em;
+}
+
+.bg-green-pastel {
+  background-color: #50d890;
+}
+
+.badge-green-pastel {
+  color: #FFFFFF;
+  background-color: #50D890;
+}
+
+.bg-login-image {
+  background: url("../img/login.png");
+  background-size: cover;
+  background-position: top;
 }
