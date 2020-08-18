@@ -1,4 +1,4 @@
-<?= $this->extend('Templates/template_dashboard'); ?>
+<?= $this->extend('templates/template_auth'); ?>
 
 <?= $this->section('content'); ?>
 <div class="container-fluid px-0 overflow-hidden">
