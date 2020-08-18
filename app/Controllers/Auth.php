@@ -23,57 +23,58 @@ class Auth extends BaseController
 
     public function login()
     {
-
-        if (!$this->validate([
+        if ($this->validate([
             'email' => [
                 'label' => 'Email',
                 'rules' => 'required|trim|valid_email',
                 'errors' => [
-                    'required' => '{field} Harus diisi',
+                    'required' => '{field} harus diisi',
                     'valid_email' => '{field} tidak valid'
                 ]
-            ], 'password' => [
+            ],
+            'password' => [
                 'label' => 'Kata Sandi',
                 'rules' => 'required|trim',
                 'errors' => [
-                    'required' => '{field} Harus diisi',
+                    'required' => '{field} harus diisi',
                 ]
-            ]
+            ],
         ])) {
             $email = $this->request->getVar('email');
             $password = $this->request->getVar('password');
-            $user = $this->userModel->getUser("email", $email);
-            // jika usernya ada
+            $user = $this->userModel->getUser('email', $email);
+            // cek usernya ada atau tidak
             if ($user) {
-                // jika usernya aktif
+                // Cek user aktif 
                 if ($user['is_active'] == 1) {
-                    // cek password
+                    // cek kata sandi
                     if (password_verify($password, $user['password'])) {
                         $data = [
                             'email' => $user['email'],
                             'role_id' => $user['role_id']
                         ];
-                        $this->session->set_userdata($data);
+                        session()->set($data);
                         // arahkan ke view user atau admin
-                        if ($user['role_id'] == 1) {
+                        if ($user['role_id'] == 14) {
                             return redirect()->to('/admin');
                         } else {
                             return redirect()->to('/user');
                         }
                     } else {
-                        session()->setFlashdata('error', 'Kata sandi anda salah, lupa kata sandi?');
+                        session()->setFlashdata('error', 'Kata sandi salah, lupa kata sandi?');
                         return redirect()->to('/login');
                     }
                 } else {
-                    session()->setFlashdata('error', 'Email berum terverifikasi, silakan verifikasi email anda!');
+                    session()->setFlashdata('error', 'Email belum terverifikasi');
                     return redirect()->to('/login');
                 }
             } else {
-                echo ('User tidak ada');
-                die;
-                session()->setFlashdata('error', 'Email tidak terdaftar!');
+                session()->setFlashdata('error', 'Email tidak terdaftar');
                 return redirect()->to('/login');
             }
+        } else {
+            $validation =  \Config\Services::validation();
+            return redirect()->to('/login')->withInput()->with('validation', $validation);
         }
     }
 
@@ -101,7 +102,7 @@ class Auth extends BaseController
                 'label' => 'Email',
                 'rules' => 'required|trim|valid_email|is_unique[users.email]',
                 'errors' => [
-                    'required' => '{field} Harus diisi',
+                    'required' => '{field} harus diisi',
                     'valid_email' => '{field} tidak valid',
                     'is_unique[user.email]' => '{field} telah terdaftar'
                 ]
@@ -110,7 +111,7 @@ class Auth extends BaseController
                 'label' => 'Kata Sandi',
                 'rules' => 'required|trim|min_length[4]|matches[password1]',
                 'errors' => [
-                    'required' => '{field} Harus diisi',
+                    'required' => '{field} harus diisi',
                     'min_length[5]' => '{field} terlalu pendek',
                     'matches[password2]' => 'Konfirmasi kata sandi salah'
                 ]
@@ -119,15 +120,15 @@ class Auth extends BaseController
                 'label' => 'Ulangi kata sandi',
                 'rules' => 'required|trim|min_length[4]|matches[password1]',
                 'errors' => [
-                    'required' => '{field} Harus diisi',
+                    'required' => '{field} harus diisi',
                     'min_length[5]' => '{field} terlalu pendek',
                     'matches[password1]' => 'Konfirmasi kata sandi salah'
                 ]
             ]
         ])) {
             $this->userModel->save([
-                'name' => $this->request->getVar('name'),
-                'email' => $this->request->getVar('email'),
+                'name' => htmlspecialchars($this->request->getVar('name')),
+                'email' => htmlspecialchars($this->request->getVar('email')),
                 'password' => password_hash($this->request->getVar('password1'), PASSWORD_DEFAULT),
                 'image' => 'arsal.png',
                 'role_id' => 14,
