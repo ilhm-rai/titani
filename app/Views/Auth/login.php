@@ -5,9 +5,6 @@
     <div class="row" style="height: 100vh;">
         <div class="col-lg-5 d-none d-lg-block bg-login-image"></div>
         <div class="col-lg-7">
-
- 
-
             <div class="p-4">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -22,7 +19,6 @@
                                 <?= session()->getFlashdata('error'); ?>
                             </div>
                         <?php endif; ?>
-
                         <form class="user" action="<?= base_url('auth/login'); ?>" method="post">
                             <?= csrf_field(); ?>
                             <div class="form-group">
@@ -54,30 +50,27 @@
                                                 <i class="fab fa-google fa-fw"></i>
                                             </div>
                                             <div class="col-8 text-left"><span>Google</span></div>
-
                                         </div>
-                                        <div class="col-8 text-left"><span>Google</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <div class="row justify-content-between">
-                                        <div class="col-4">
-                                            <i class="fab fa-facebook-f fa-fw"></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                        <div class="row justify-content-between">
+                                            <div class="col-4">
+                                                <i class="fab fa-facebook-f fa-fw"></i>
+                                            </div>
+                                            <div class="col-8 text-left"><span>Facebook</span></div>
                                         </div>
-                                        <div class="col-8 text-left"><span>Facebook</span></div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
+                        </form>
+                        <div class="text-center mt-5">
+                            <a class="small link-reset" href="/register">Belum punya akun?<span class="text-pastel-green"> mendaftar sekarang</span></a>
                         </div>
-                    </form>
-                    <div class="text-center mt-5">
-                        <a class="small link-reset" href="/register">Belum punya akun?<span class="text-pastel-green"> mendaftar sekarang</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<?= $this->endSection(); ?>
+    <?= $this->endSection(); ?>
