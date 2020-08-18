@@ -9,7 +9,7 @@
                 <div class="section-desc text-wrap">
                     <p>Dapatkan Berbagai Informasi Pertanian Eksklusif Secara <span class="text-pastel-green">Gratis</span>.</p>
                 </div>
-                <a href="#" class="btn btn-pastel-green rounded-pill">Baca Selengkapnya</a>
+                <a href="#" class="btn btn-lg-custom btn-pastel-green rounded-pill">Baca Selengkapnya</a>
             </div>
             <div class="col-lg-6">
                 <img src="<?= base_url('assets/img/hero1.png'); ?>" alt="Ladang Informasi Tani Masa Kini" class="w-100">
@@ -50,7 +50,7 @@
                 <div class="section-desc text-wrap">
                     <p>Materi di titani disusun oleh para ahli di bidang pertanian dan telah tersertifikasi.</p>
                 </div>
-                <a href="#" class="btn btn-pastel-green rounded-pill">Baca Selengkapnya</a>
+                <a href="#" class="btn btn-lg-custom btn-pastel-green rounded-pill">Baca Selengkapnya</a>
             </div>
         </div>
     </section>
@@ -62,7 +62,7 @@
                 <div class="section-desc text-wrap">
                     <p>Titani mendorong minat generasi milineal untuk ikut terjun ke dalam dunia pertanian.</p>
                 </div>
-                <a href="#" class="btn btn-pastel-green rounded-pill">Baca Selengkapnya</a>
+                <a href="#" class="btn btn-lg-custom btn-pastel-green rounded-pill">Baca Selengkapnya</a>
             </div>
             <div class="col-lg-6">
                 <img src="<?= base_url('assets/img/hero3.png'); ?>" alt="Ladang Informasi Tani Masa Kini" class="w-100">
@@ -170,7 +170,7 @@
             <div class="col-lg-4">
                 <h2 class="section-title mb-4">Kata Petani</h2>
                 <p>Titani telah banyak melahirkan petani profesional di Indonesia, yuk simak kata mereka!</p>
-                <a href="#" class="btn btn-pastel-green rounded-pill">Baca Selengkapnya</a>
+                <a href="#" class="btn btn-lg-custom btn-pastel-green rounded-pill">Baca Selengkapnya</a>
             </div>
             <div class="col-lg-7 offset-1">
                 <div class="farmer-feedback">
@@ -244,7 +244,7 @@
         <h2 class="section-title text-white mb-4">Tunggu Apa Lagi?</h2>
         <p class="mb-4">Petani di Indonesia sudah banyak, kita perlu lebih banyak
             saatnya kamu jadi bagian sahabat tani.</p>
-        <a href="#" class="btn btn-light rounded-pill text-pastel-green">Daftar Sekarang</a>
+        <a href="#" class="btn btn-lg-custom btn-light rounded-pill text-pastel-green">Daftar Sekarang</a>
     </div>
 </section>
 <script>
