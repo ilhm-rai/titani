@@ -11,4 +11,13 @@ class Courses extends BaseController
         ];
         return view('courses/index', $data);
     }
+
+    public function progress()
+    {
+        $data = [
+            'title' => 'Titani Indonesia'
+        ];
+
+        return view('courses/progress', $data);
+    }
 }

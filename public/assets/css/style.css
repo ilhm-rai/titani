@@ -74,7 +74,8 @@ a.nav-hover:hover::after {
 }
 
 .btn-custom {
-  padding: 0.625rem 3.125rem;
+  border-radius: 0.625rem;
+  padding: 0.5rem 3.125rem;
   font-size: 0.875rem;
 }
 
@@ -129,11 +130,13 @@ h2.section-title {
 .card-feedback,
 .card-blog,
 .card-course,
+.card-progress,
 .card-service {
   border-radius: 0.625rem;
   box-shadow: 0 4px 8px rgba(60, 64, 67, 0.25) !important;
 }
 
+/* Service */
 .card-service .card-header {
   display: flex;
   justify-content: center;
@@ -169,22 +172,11 @@ h2.section-title {
   text-decoration: none;
 }
 
-.content-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-vertically {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
 .partner-img {
   max-height: 255px;
 }
 
+/* Feedback */
 .frame-feedback {
   height: 300px;
 }
@@ -226,6 +218,7 @@ h2.section-title {
   background-position: center;
 }
 
+/* Blog */
 .card-blog .card-img-top {
   border-radius: 0.625rem 0.625rem 0 0;
 }
@@ -237,6 +230,7 @@ h2.section-title {
   margin-bottom: 5px;
 }
 
+/* Course */
 .card-course .card-footer {
   padding-bottom: 1.5625rem;
   background-color: transparent;
@@ -247,6 +241,32 @@ h2.section-title {
   font-size: 1.25rem;
   margin-bottom: 0.3125rem;
   font-weight: bold;
+}
+
+/* Course Progress */
+.card-progress .card-body {
+  padding: 0.625rem;
+}
+
+.card-progress .card-title {
+  font-weight: 600;
+}
+
+.card-progress .card-img {
+  height: 100%;
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-vertically {
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 footer .main-footer {
@@ -283,6 +303,17 @@ hr.break-section {
 
 .bg-green-pastel {
   background-color: #50d890;
+}
+
+.bg-orange {
+  background-color: #FFAD41;
+}
+
+.rectangle {
+  width: 17px;
+  height: 17px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
 .custom-badge {

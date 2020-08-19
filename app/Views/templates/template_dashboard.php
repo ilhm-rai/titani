@@ -40,14 +40,14 @@
                 Menu
             </div>
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-globe-asia"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <!-- Nav Item - Courses Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCourses" aria-expanded="true" aria-controls="collapseCourses">
                     <i class="fas fa-fw fa-spa"></i>
                     <span>Tanam Ilmu</span>
@@ -56,7 +56,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="utilities-color.html"><i class="far fa-fw fa-circle"></i> Daftar Kelas</a>
                         <a class="collapse-item" href="utilities-border.html"><i class="far fa-fw fa-circle"></i> Kelas Saya</a>
-                        <a class="collapse-item" href="utilities-animation.html"><i class="far fa-fw fa-circle"></i> Progres Kelas</a>
+                        <a class="collapse-item" href="utilities-animation.html"><i class="far fa-fw fa-circle"></i> Progres Belajar</a>
                     </div>
                 </div>
             </li>
@@ -220,11 +220,11 @@
                         <li class="nav-item dropdown mr-0">
                             <a class="nav-link pr-0 dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="position-relative">
-                                    <img class="img-profile rounded-circle shadow-sm" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                                    <img class="img-profile rounded-circle shadow-sm" src="<?= base_url('assets/img/farmer1.png'); ?>">
                                     <div class="status-indicator bg-success"></div>
                                 </div>
                                 <div class="user-info ml-2 d-none d-lg-inline">
-                                    <span class="user-name">Valerie Luna</span>
+                                    <span class="user-name">Gagan Suganda</span>
                                     <span class="user-address d-block">Tasikmalaya, Jawa Barat</span>
                                 </div>
                             </a>
@@ -258,9 +258,13 @@
                 <div class="container-fluid">
 
                     <?= $this->renderSection('content'); ?>
-
                 </div>
                 <!-- /.container-fluid -->
+
+                <!-- Scroll to Top Button-->
+                <a class="scroll-to-top rounded-circle" href="#page-top">
+                    <i class="fas fa-angle-up"></i>
+                </a>
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
